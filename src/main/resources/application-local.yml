@@ -1,0 +1,10 @@
+server:
+  port: 9187
+
+spring:
+  application:
+    name: hcph-online-exam-java
+  jackson:
+    default-property-inclusion: NON_NULL
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
