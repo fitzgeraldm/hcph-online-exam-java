@@ -72,6 +72,9 @@ bootcamp.
 2. When logging the LoanRequest object (V1LoanServiceImpl.applyLoan), it should not display the birthdate and email as these are
 sensitive information. _5 pts._
    
+Sample log:
+   >Request: LoanRequest(firstName="Juan", lastName=Dela Cruz, gender=M, amount=20001)
+   
 **BirthDateValidator.java**
 1. Modify isValid method to correctly check if customer is of legal age. _15 pts._
 

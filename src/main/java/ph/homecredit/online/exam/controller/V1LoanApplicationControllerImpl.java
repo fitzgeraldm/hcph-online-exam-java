@@ -10,6 +10,8 @@ import ph.homecredit.online.exam.dto.LoanRequest;
 import ph.homecredit.online.exam.dto.LoanResponse;
 import ph.homecredit.online.exam.service.LoanService;
 
+import javax.validation.Valid;
+
 /**
  * @author Fitzgerald Marzo
  * @since 2023-11-11
@@ -23,7 +25,7 @@ public class V1LoanApplicationControllerImpl implements LoanApplicationControlle
 
   @PostMapping
   @Override
-  public ResponseEntity<LoanResponse> applyLoan(@RequestBody LoanRequest request) {
+  public ResponseEntity<LoanResponse> applyLoan(@RequestBody @Valid LoanRequest request) {
     return ResponseEntity.ok(loanService.applyLoan(request));
   }
 }
