@@ -16,16 +16,8 @@ public class V1LoanServiceImpl implements LoanService {
   //TODO You may modify this method according to the requirements
   public LoanResponse applyLoan(LoanRequest request) {
 
-    log.info("Request: {}", request);
+    log.info("Request: {}", request.toString());
 
-    return LoanResponse.builder()
-        .firstName(request.getFirstName())
-        .lastName(request.getLastName())
-        .gender(request.getGender())
-        .birthDate(request.getBirthDate().toString())
-        .email(request.getEmail())
-        .productType(request.getProductType())
-        .amount(request.getAmount())
-        .build();
+    return new LoanResponse();
   }
 }
